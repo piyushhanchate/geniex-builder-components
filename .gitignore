@@ -36,3 +36,7 @@ next-env.d.ts
 
 #npm package
 dist
+
+#caches
+/.rollup.cache
+/.parcel-cache
