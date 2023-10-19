@@ -1,43 +1,46 @@
-
-import * as React from 'react';
+import type { GridProps } from "@mui/material/Grid";
+import Grid from "@mui/material/Grid";
 import { forwardRef, type ReactNode } from "react";
+import type { SxProps } from "@mui/system";
 import Button, { ButtonProps } from "@mui/material/Button";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
-import { MyButtonProps } from './MyButton';
+import { MyButtonProps } from "./types";
 
+export const MyButton = forwardRef<HTMLButtonElement, MyButtonProps>(
+  (props, ref) => {
+    const { textValue, scrollTo, link, isDisabled, ...restProps } = props;
 
-
-export const MyButton = forwardRef<HTMLButtonElement, MyButtonProps>((props, ref) => {
-  return (
-    <>
-      {props.link && (
-        <Link href={props.link}>
-          <Button {...props} ref={ref}>
-            {props.textValue}
+    if ((!scrollTo && !link) || isDisabled) {
+      return (
+        <Button {...restProps} ref={ref}>
+          {textValue}
+        </Button>
+      );
+    } else if (!!link) {
+      return (
+        <Link href={link}>
+          <Button {...restProps} ref={ref}>
+            {textValue}
           </Button>
         </Link>
-      )}
-      {props.scrollTo && (
+      );
+    } else if (!!scrollTo) {
+      return (
         <ScrollLink
-          to={props.scrollTo}
+          to={scrollTo}
           spy={true}
           smooth={true}
           offset={-70}
           duration={500}
         >
           <Button {...props} ref={ref}>
-            {props.textValue}
+            {textValue}
           </Button>
         </ScrollLink>
-      )}
-      {!props.scrollTo && !props.link && (
-        <Button {...props} ref={ref}>
-          {props.textValue}
-        </Button>
-      )}
-    </>
-  );
-});
+      );
+    }
+  }
+);
 
 MyButton.displayName = "MyButton";
