@@ -1,1 +1,0 @@
-{"version":3,"file":"MyButton.d.ts","sourceRoot":"","sources":["../../src/components/MyButton.tsx"],"names":[],"mappings":"AACA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAE/B,OAAe,EAAE,WAAW,EAAE,MAAM,sBAAsB,CAAC;AAI3D,MAAM,WAAW,aAAc,SAAQ,WAAW;IAChD,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,SAAS,EAAE,MAAM,CAAC;CACnB;AAED,eAAO,MAAM,QAAQ,sGA8BnB,CAAC"}

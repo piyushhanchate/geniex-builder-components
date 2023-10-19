@@ -1,7 +1,7 @@
-import * as React from "react";
-import { MyButtonProps } from "./MyButton";
-import { MyTypographyProps } from "./MyTypography";
-export const MyButton: React.ForwardRefExoticComponent<Omit<MyButtonProps, "ref"> & React.RefAttributes<HTMLButtonElement>>;
-export const MyTypography: React.ForwardRefExoticComponent<Omit<MyTypographyProps, "ref"> & React.RefAttributes<HTMLParagraphElement>>;
+import React from "react";
+import { MyButtonProps, MyTypographyProps, MyImageProps } from "./types";
+export const MyButton: React.ForwardRefExoticComponent<MyButtonProps & React.RefAttributes<HTMLButtonElement>>;
+export const MyTypography: React.ForwardRefExoticComponent<MyTypographyProps & React.RefAttributes<HTMLParagraphElement>>;
+export const MyImage: React.ForwardRefExoticComponent<Omit<MyImageProps, "ref"> & React.RefAttributes<HTMLDivElement>>;
 
 //# sourceMappingURL=types.d.ts.map
