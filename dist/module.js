@@ -1,8 +1,8 @@
 import {jsx as $4MPRY$jsx, jsxs as $4MPRY$jsxs} from "react/jsx-runtime";
 import {forwardRef as $4MPRY$forwardRef} from "react";
-import $4MPRY$muimaterialButton from "@mui/material/Button";
 import $4MPRY$nextlink from "next/link";
 import {Link as $4MPRY$Link} from "react-scroll";
+import $4MPRY$muimaterialButtonBase from "@mui/material/ButtonBase";
 import {Typography as $4MPRY$Typography, Box as $4MPRY$Box} from "@mui/material";
 import $4MPRY$nextimage from "next/image";
 
@@ -22,14 +22,14 @@ $parcel$export($3a9dd622ae412ebc$exports, "MyImage", () => $06fd835a0408c4e6$exp
 
 const $0c1d67ad2f1340a0$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $4MPRY$forwardRef)((props, ref)=>{
     const { textValue: textValue, scrollTo: scrollTo, link: link, isDisabled: isDisabled, ...restProps } = props;
-    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButton), {
+    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButtonBase), {
         ...restProps,
         ref: ref,
         children: textValue
     });
     else if (!!link) return /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$nextlink), {
         href: link,
-        children: /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButton), {
+        children: /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButtonBase), {
             ...restProps,
             ref: ref,
             children: textValue
@@ -41,7 +41,7 @@ const $0c1d67ad2f1340a0$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $4MPRY$forwa
         smooth: true,
         offset: -70,
         duration: 500,
-        children: /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButton), {
+        children: /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$muimaterialButtonBase), {
             ...props,
             ref: ref,
             children: textValue

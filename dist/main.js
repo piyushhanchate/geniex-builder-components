@@ -1,8 +1,8 @@
 var $iA2ta$reactjsxruntime = require("react/jsx-runtime");
 var $iA2ta$react = require("react");
-var $iA2ta$muimaterialButton = require("@mui/material/Button");
 var $iA2ta$nextlink = require("next/link");
 var $iA2ta$reactscroll = require("react-scroll");
+var $iA2ta$muimaterialButtonBase = require("@mui/material/ButtonBase");
 var $iA2ta$muimaterial = require("@mui/material");
 var $iA2ta$nextimage = require("next/image");
 
@@ -43,14 +43,14 @@ $parcel$export($c5b2eceab60bd0bb$exports, "MyImage", () => $6ede5b678d0613c7$exp
 
 const $aa3056714abcd11a$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $iA2ta$react.forwardRef)((props, ref)=>{
     const { textValue: textValue, scrollTo: scrollTo, link: link, isDisabled: isDisabled, ...restProps } = props;
-    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButton))), {
+    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
         ...restProps,
         ref: ref,
         children: textValue
     });
     else if (!!link) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$nextlink))), {
         href: link,
-        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButton))), {
+        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
             ...restProps,
             ref: ref,
             children: textValue
@@ -62,7 +62,7 @@ const $aa3056714abcd11a$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $iA2ta$react
         smooth: true,
         offset: -70,
         duration: 500,
-        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButton))), {
+        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
             ...props,
             ref: ref,
             children: textValue
