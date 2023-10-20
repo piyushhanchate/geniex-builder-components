@@ -1,6 +1,9 @@
-import React from 'react'
+import type { GridProps } from "@mui/material/Grid";
+import Grid from "@mui/material/Grid";
 import { forwardRef, type ReactNode } from "react";
-import Button, { ButtonProps } from "@mui/material/Button";
+import type { SxProps } from "@mui/system";
+// import Button, { ButtonProps } from "@mui/material/Button";
+import Button from "@mui/material/ButtonBase";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { MyButtonProps } from "./types";
