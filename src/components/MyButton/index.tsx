@@ -5,40 +5,19 @@ import Button from "@mui/material/ButtonBase";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { MyButtonProps } from "./types";
+import LinkWrapper from "../utils/LinkWrapper";
 
 export const MyButton = forwardRef<HTMLButtonElement, MyButtonProps>(
   (props, ref) => {
     const { textValue, scrollTo, link, isDisabled, ...restProps } = props;
 
-    if ((!scrollTo && !link) || isDisabled) {
-      return (
+    return (
+      <LinkWrapper props={props}>
         <Button {...restProps} ref={ref}>
           {textValue}
         </Button>
-      );
-    } else if (!!link) {
-      return (
-        <Link href={link}>
-          <Button {...restProps} ref={ref}>
-            {textValue}
-          </Button>
-        </Link>
-      );
-    } else if (!!scrollTo) {
-      return (
-        <ScrollLink
-          to={scrollTo}
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <Button {...props} ref={ref}>
-            {textValue}
-          </Button>
-        </ScrollLink>
-      );
-    }
+      </LinkWrapper>
+    );
   }
 );
 

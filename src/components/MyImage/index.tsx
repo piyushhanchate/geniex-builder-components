@@ -10,21 +10,15 @@ export const MyImage = forwardRef<HTMLDivElement, MyImageProps>(
     const { objectFit, width, src, height, imageStyles, ...restProps } = props;
 
     return (
-      <Box
-        position={"relative"}
-        {...restProps}
-        width={width}
-        height={height}
-        ref={ref}
-      >
-        <Image
-          src={src}
-          alt="image"
-          fill
-          quality={100}
-          style={{ objectFit: objectFit, ...imageStyles }}
-        />
-      </Box>
+      <Box position={"relative"} {...restProps} ref={ref}>
+      <Image
+        src={src}
+        alt="next-image"
+        fill
+        quality={100}
+        style={{ objectFit: objectFit, ...imageStyles }}
+      />
+    </Box>
     );
   }
 );

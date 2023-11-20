@@ -33,28 +33,26 @@ function $parcel$interopDefault(a) {
 }
 var $c5b2eceab60bd0bb$exports = {};
 
+$parcel$export($c5b2eceab60bd0bb$exports, "LinkWrapper", () => $4c14b01934830225$export$2e2bcd8739ae039);
 $parcel$export($c5b2eceab60bd0bb$exports, "MyButton", () => $aa3056714abcd11a$export$45b4da2e68d1771e);
 $parcel$export($c5b2eceab60bd0bb$exports, "MyTypography", () => $0212dcc17b2f0597$export$c1c29eb9ae7b0b42);
 $parcel$export($c5b2eceab60bd0bb$exports, "MyImage", () => $6ede5b678d0613c7$export$8969e642ac173451);
+//@ts-nocheck
 
 
 
 
-
-const $aa3056714abcd11a$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $iA2ta$react.forwardRef)((props, ref)=>{
-    const { textValue: textValue, scrollTo: scrollTo, link: link, isDisabled: isDisabled, ...restProps } = props;
-    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
-        ...restProps,
-        ref: ref,
-        children: textValue
+function $4c14b01934830225$export$2e2bcd8739ae039({ props: props, children: children }) {
+    const { scrollTo: scrollTo, link: link, isDisabled: isDisabled } = props;
+    if (!scrollTo && !link || isDisabled) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$reactjsxruntime.Fragment), {
+        children: children
     });
     else if (!!link) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$nextlink))), {
         href: link,
-        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
-            ...restProps,
-            ref: ref,
-            children: textValue
-        })
+        style: {
+            textDecoration: "none"
+        },
+        children: children
     });
     else if (!!scrollTo) return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$reactscroll.Link), {
         to: scrollTo,
@@ -62,8 +60,21 @@ const $aa3056714abcd11a$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $iA2ta$react
         smooth: true,
         offset: -70,
         duration: 500,
+        children: children
+    });
+}
+
+
+
+
+
+
+const $aa3056714abcd11a$export$45b4da2e68d1771e = /*#__PURE__*/ (0, $iA2ta$react.forwardRef)((props, ref)=>{
+    const { textValue: textValue, scrollTo: scrollTo, link: link, isDisabled: isDisabled, ...restProps } = props;
+    return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $4c14b01934830225$export$2e2bcd8739ae039), {
+        props: props,
         children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$muimaterialButtonBase))), {
-            ...props,
+            ...restProps,
             ref: ref,
             children: textValue
         })
