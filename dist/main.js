@@ -110,12 +110,10 @@ const $6ede5b678d0613c7$export$8969e642ac173451 = /*#__PURE__*/ (0, $iA2ta$react
     return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$muimaterial.Box), {
         position: "relative",
         ...restProps,
-        width: width,
-        height: height,
         ref: ref,
         children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, ($parcel$interopDefault($iA2ta$nextimage))), {
             src: src,
-            alt: "image",
+            alt: "next-image",
             fill: true,
             quality: 100,
             style: {

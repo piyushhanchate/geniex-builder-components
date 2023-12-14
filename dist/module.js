@@ -89,12 +89,10 @@ const $06fd835a0408c4e6$export$8969e642ac173451 = /*#__PURE__*/ (0, $4MPRY$forwa
     return /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$Box), {
         position: "relative",
         ...restProps,
-        width: width,
-        height: height,
         ref: ref,
         children: /*#__PURE__*/ (0, $4MPRY$jsx)((0, $4MPRY$nextimage), {
             src: src,
-            alt: "image",
+            alt: "next-image",
             fill: true,
             quality: 100,
             style: {
