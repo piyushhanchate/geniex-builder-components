@@ -1,78 +1,71 @@
-"use client";
+//@ts-nocheck
 
 import React from "react";
 import { forwardRef, type ReactNode } from "react";
 
-import { Navigation, Virtual } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/virtual";
-import "swiper/css/pagination";
+import { Navigation, Virtual, Pagination } from "swiper/modules";
 
+//@ts-ignore
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Box } from "@mui/material";
-import { Pagination } from "swiper/modules";
 import { MyCarouselProps } from "./types";
+import "@splidejs/react-splide/css";
 
+//@ts-ignore
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+export const MyCarousel = forwardRef<HTMLButtonElement, MyCarouselProps>(
+  (props, ref) => {
+    const {
+      children,
+      isNavigationEnabled,
+      isPaginationEnabled,
+      slidesPerView,
+      spaceBetween,
+      navButtonColor,
+      autoWidth,
+      padding,
+      gap,
+      ...restProps
+    } = props;
 
-export const MyCarousel = forwardRef<
-  HTMLButtonElement,
-  MyCarouselProps
->((props, ref) => {
-  const {
-    children,
-    isNavigationEnabled,
-    isPaginationEnabled,
-    slidesPerView,
-    spaceBetween,
-    navButtonColor,
-    ...restProps
-  } = props;
-
-
-  return (
-    <Box
-      {...restProps}
-      sx={{
-        ...restProps.sx,
-        ".swiper-button-prev": {
-          color: navButtonColor,
-        },
-        ".swiper-button-next": {
-          color: navButtonColor,
-        },
-      }}
-      ref={ref}
-    >
-      <Swiper
-        modules={[Navigation, Pagination, Virtual]}
-        enabled={true}
-        navigation={!!isNavigationEnabled}
-        pagination={!!isPaginationEnabled}
-        slidesPerView={slidesPerView ? slidesPerView : 'auto'}
-        centeredSlides={true}
-        spaceBetween={spaceBetween}
+    return (
+      <Box
+        {...restProps}
+        sx={{
+          ...restProps.sx,
+          ".swiper-button-prev": {
+            color: navButtonColor,
+          },
+          ".swiper-button-next": {
+            color: navButtonColor,
+          },
+        }}
+        ref={ref}
       >
-       
-        {React.Children.map(children, (child, index) => {
-          return (
-            <SwiperSlide
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              {child}
-            </SwiperSlide>
-          );
-        })}
-        
-      </Swiper>
-    </Box>
-  );
-});
-
-
+        <Splide
+          options={{
+            rewind: true,
+            focus: "center",
+            autoWidth: autoWidth,
+            padding,
+            gap,
+          }}
+          aria-label="React Splide Example"
+        >
+          {React.Children.map(children, (child, index) => {
+            return (
+              <SplideSlide
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                {child}
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </Box>
+    );
+  }
+);
 
 MyCarousel.displayName = "MyCarousel";

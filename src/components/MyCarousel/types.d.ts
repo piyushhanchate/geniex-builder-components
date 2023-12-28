@@ -8,4 +8,5 @@ export interface MyCarouselProps extends BoxProps {
   slidesPerView?: number | "auto" | undefined,
   spaceBetween?: number,
   navButtonColor?: string,
+  autoWidth?: booelan 
 }

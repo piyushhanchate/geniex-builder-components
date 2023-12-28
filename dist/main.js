@@ -5,6 +5,7 @@ var $iA2ta$reactscroll = require("react-scroll");
 var $iA2ta$muimaterialButtonBase = require("@mui/material/ButtonBase");
 var $iA2ta$muimaterial = require("@mui/material");
 var $iA2ta$nextimage = require("next/image");
+var $iA2ta$splidejsreactsplide = require("@splidejs/react-splide");
 
 
 function $parcel$exportWildcard(dest, source) {
@@ -37,6 +38,7 @@ $parcel$export($c5b2eceab60bd0bb$exports, "LinkWrapper", () => $4c14b01934830225
 $parcel$export($c5b2eceab60bd0bb$exports, "MyButton", () => $aa3056714abcd11a$export$45b4da2e68d1771e);
 $parcel$export($c5b2eceab60bd0bb$exports, "MyTypography", () => $0212dcc17b2f0597$export$c1c29eb9ae7b0b42);
 $parcel$export($c5b2eceab60bd0bb$exports, "MyImage", () => $6ede5b678d0613c7$export$8969e642ac173451);
+$parcel$export($c5b2eceab60bd0bb$exports, "MyCarousel", () => $0e28bbd7eaf26498$export$6c4fa7bc47539079);
 //@ts-nocheck
 
 
@@ -124,6 +126,45 @@ const $6ede5b678d0613c7$export$8969e642ac173451 = /*#__PURE__*/ (0, $iA2ta$react
     });
 });
 $6ede5b678d0613c7$export$8969e642ac173451.displayName = "MyImage";
+
+
+
+
+
+
+const $0e28bbd7eaf26498$export$6c4fa7bc47539079 = /*#__PURE__*/ (0, $iA2ta$react.forwardRef)((props, ref)=>{
+    const { children: children, isNavigationEnabled: isNavigationEnabled, isPaginationEnabled: isPaginationEnabled, slidesPerView: slidesPerView, spaceBetween: spaceBetween, navButtonColor: navButtonColor, ...restProps } = props;
+    return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$muimaterial.Box), {
+        ...restProps,
+        sx: {
+            ...restProps.sx,
+            ".swiper-button-prev": {
+                color: navButtonColor
+            },
+            ".swiper-button-next": {
+                color: navButtonColor
+            }
+        },
+        ref: ref,
+        children: /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$splidejsreactsplide.Splide), {
+            options: {
+                rewind: true,
+                focus: "center"
+            },
+            "aria-label": "React Splide Example",
+            children: (0, ($parcel$interopDefault($iA2ta$react))).Children.map(children, (child, index)=>{
+                return /*#__PURE__*/ (0, $iA2ta$reactjsxruntime.jsx)((0, $iA2ta$splidejsreactsplide.SplideSlide), {
+                    style: {
+                        display: "flex",
+                        justifyContent: "center"
+                    },
+                    children: child
+                });
+            })
+        })
+    });
+});
+$0e28bbd7eaf26498$export$6c4fa7bc47539079.displayName = "MyCarousel";
 
 
 
